@@ -3,6 +3,24 @@ hm.popbox
 
 public popbox
 
+主要实现了可多次重复调用，多层弹出功能。自动调整mask层 z-index值
+
+main mathod
+
+1, hm.popbox({html:'',width:320,callBack:fn});
+
+return hmpopbox object
+
+you can use return object to close it and get the popbox DOM 
+
+2,hm.alert({text:'I\'m an alert popbox'});
+
+3, hm.confirm({title:'标题',text:'弹出框信息。'},okFn,cencalFn);
+
+4, hm.toast({text:'toast show txt',timeour:3000});
+
+----------------------------------------------------------------------------------
+
 hm.popbox 实例
 
 hm.alert({title:'标题',text:'弹出框信息。'})
