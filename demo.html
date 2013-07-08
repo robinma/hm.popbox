@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>demoe</title>
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/hm_popBox.js"></script>
+		<link href="css/base.css" rel="stylesheet" type="text/css">
+		<link href="css/popbox.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<h3>hm.popbox 实例</h3>
+			<hr />
+			<h4>hm.alert({title:'标题',text:'弹出框信息。'})</h4>
+			<div class="">
+<h6>params</h6>
+				<pre>
+noTitle : true, //是否显示标题
+text : '请输入提示信息', //内容文
+height : 'auto', //高度字
+width : 210,//宽度
+confirm:'确定',
+enhance:false,
+icontype:'ok' //ok||notice
+				</pre>
+			</div>
+			<div class="">
+				<a href="javascript:;" id="demo1">demo</a>
+			</div>
+			<h4>hm.confirm({title:'标题',text:'弹出框信息。'},fn1,fn2)</h4>
+			<div class="">
+				<pre>
+demo2.click(function(){
+	hm.confirm({title:'标题',text:'弹出框信息。'},function(){
+		hm.alert({text:'这个是确定按钮'});
+	},function(){
+		hm.alert({text:'这个是取消按钮'});
+	});
+});
+				</pre>
+			</div>
+			<div class="">
+				<a href="javascript:;" id="demo2">demo</a>
+			</div>
+			
+			<h4>hm.toast({text:''})</h4>
+			
+			<h4>hm.popbox({text:'',html:'',callBack:fn})</h4>
+			
+			<pre>
+callBack : null, //返回函数
+noTitle : false, //是否显示标题栏
+timeout : 0, //设置等待关闭时间，为0为不关闭
+arrow:false,
+direction:'top',//top|right|bottom|left
+skewing:'20',
+link : null, //链接地址
+requestType : null, //iframe,ajax,img
+title : '标题', //标题
+drag : true, //是否拖动，当此值为true时，如果noTitle为false，也不可以拖动
+width : 400, //内容区的宽度
+height : 'auto', //内容的高度
+html : '',//popBox的内容
+style:"",//目前针对iframe设置
+scrolling:"auto",//目前针对iframe使用
+noMask:false,
+noClose:false,
+positionStyle:'auto',//auto|define
+top:null,left:null,right:null,bottom:null,
+closeFn:null
+			</pre>
+		</div>
+		<script type="text/javascript">
+			(function(){
+				var demo1=$('#demo1');
+				var demo2=$('#demo2');
+				
+				demo1.click(function(){
+					hm.alert({title:'标题',text:'弹出框信息。'});
+				});
+				
+				demo2.click(function(){
+					hm.confirm({title:'标题',text:'弹出框信息。'},function(){
+						hm.alert({text:'这个是确定按钮'});
+					},function(){
+						hm.alert({text:'这个是取消按钮'});
+					});
+				});
+			}());
+		</script>
+	</body>
+</html>
+
