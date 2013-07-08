@@ -1,5 +1,5 @@
 /**
- * @author jerry
+ * @author Robin ma
  */
 (function(exports){
 	//native promote
